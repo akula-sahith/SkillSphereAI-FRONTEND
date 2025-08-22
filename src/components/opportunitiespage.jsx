@@ -54,7 +54,7 @@ const OpportunitiesPage = () => {
       </div>
 
       {/* Student Section */}
-      <section className="py-16">
+      <section className="py-16" style={{ backgroundColor: '#f8fafc' }}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             

@@ -46,7 +46,7 @@ const Stats = () => {
     const duration = 2500; // 2.5 seconds
     const startTime = Date.now();
     
-    const finalValues = [1200, 150, 35, 220];
+    const finalValues = [99999, 9999, 9999, 999];
 
     const animate = () => {
       const elapsed = Date.now() - startTime;
@@ -84,7 +84,7 @@ const Stats = () => {
   return (
     <div 
       className="py-16 px-8 md:px-16" 
-      style={{ backgroundColor: '#E0E3EB' }}
+      style={{ backgroundColor: '#f1f5f9' }}
       ref={statsRef}
     >
       {/* Custom animations */}
@@ -131,18 +131,19 @@ const Stats = () => {
             {/* Total Students */}
             <div className="text-center stat-item-fade">
               <div className="mb-3">
-                <div className="w-8 h-8 rounded-full mx-auto mb-3" style={{ backgroundColor: '#2947A9' }}>
-                  <div className="w-full h-full flex items-center justify-center">
-                    <div className="w-4 h-4 rounded-full bg-white"></div>
-                  </div>
+                <div className="w-12 h-12 rounded-lg mx-auto mb-3 flex items-center justify-center" style={{ backgroundColor: '#2947A9' }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                  </svg>
                 </div>
               </div>
               <div 
                 ref={el => counterRefs.current[0] = el}
-                className="text-4xl md:text-5xl font-bold text-gray-900 mb-2"
+                className="text-3xl md:text-4xl font-bold text-gray-900 mb-2"
                 style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}
               >
-                1200
+                99999
               </div>
               <p className="text-gray-500 text-sm font-medium">Total Students</p>
             </div>
@@ -150,19 +151,21 @@ const Stats = () => {
             {/* Total Mentors */}
             <div className="text-center stat-item-fade">
               <div className="mb-3">
-                <div className="w-8 h-8 mx-auto mb-3 flex items-center justify-center">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <rect x="3" y="4" width="18" height="12" rx="2" fill="#2947A9"/>
-                    <path d="M7 8h10M7 12h6" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                <div className="w-12 h-12 rounded-lg mx-auto mb-3 flex items-center justify-center" style={{ backgroundColor: '#2947A9' }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                   </svg>
                 </div>
               </div>
               <div 
                 ref={el => counterRefs.current[1] = el}
-                className="text-4xl md:text-5xl font-bold text-gray-900 mb-2"
+                className="text-3xl md:text-4xl font-bold text-gray-900 mb-2"
                 style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}
               >
-                150
+                9999
               </div>
               <p className="text-gray-500 text-sm font-medium">Total Mentors</p>
             </div>
@@ -170,20 +173,19 @@ const Stats = () => {
             {/* Courses Available */}
             <div className="text-center stat-item-fade">
               <div className="mb-3">
-                <div className="w-8 h-8 mx-auto mb-3 flex items-center justify-center">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M3 7L12 2L21 7L12 12L3 7Z" fill="#2947A9"/>
-                    <path d="M3 17L12 22L21 17" stroke="#2947A9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M3 12L12 17L21 12" stroke="#2947A9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <div className="w-12 h-12 rounded-lg mx-auto mb-3 flex items-center justify-center" style={{ backgroundColor: '#2947A9' }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
                   </svg>
                 </div>
               </div>
               <div 
                 ref={el => counterRefs.current[2] = el}
-                className="text-4xl md:text-5xl font-bold text-gray-900 mb-2"
+                className="text-3xl md:text-4xl font-bold text-gray-900 mb-2"
                 style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}
               >
-                35
+                9999
               </div>
               <p className="text-gray-500 text-sm font-medium">Courses Available</p>
             </div>
@@ -191,21 +193,19 @@ const Stats = () => {
             {/* Projects Completed */}
             <div className="text-center stat-item-fade">
               <div className="mb-3">
-                <div className="w-8 h-8 mx-auto mb-3 flex items-center justify-center">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <circle cx="6" cy="6" r="2" fill="#2947A9"/>
-                    <circle cx="18" cy="6" r="2" fill="#2947A9"/>
-                    <circle cx="6" cy="18" r="2" fill="#2947A9"/>
-                    <path d="M8 6H16M6 8V16M8 18H12" stroke="#2947A9" strokeWidth="2" strokeLinecap="round"/>
+                <div className="w-12 h-12 rounded-lg mx-auto mb-3 flex items-center justify-center" style={{ backgroundColor: '#2947A9' }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                    <polyline points="9,11 12,14 22,4"/>
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
                   </svg>
                 </div>
               </div>
               <div 
                 ref={el => counterRefs.current[3] = el}
-                className="text-4xl md:text-5xl font-bold text-gray-900 mb-2"
+                className="text-3xl md:text-4xl font-bold text-gray-900 mb-2"
                 style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}
               >
-                220
+                999
               </div>
               <p className="text-gray-500 text-sm font-medium">Projects Completed</p>
             </div>
