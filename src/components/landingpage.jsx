@@ -7,6 +7,7 @@ import Stats from './stats';
 import FAQ from './FAQSection';
 import Contact from './contactus';
 import Footer from './Footer';
+import { Link } from 'react-router-dom';
 
 const SkillSphereLanding = () => {
     const featuresRef = useRef(null);
@@ -51,9 +52,13 @@ const SkillSphereLanding = () => {
                 Academy
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
               </a>
-              <a href="#" className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2.5 rounded-full font-semibold hover:from-orange-600 hover:to-red-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+             <Link 
+              to="/mainauth" 
+                className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2.5 rounded-full font-semibold hover:from-orange-600 hover:to-red-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              >
                 Get Started
-              </a>
+              </Link>
+
             </div>
           </div>
         </div>
