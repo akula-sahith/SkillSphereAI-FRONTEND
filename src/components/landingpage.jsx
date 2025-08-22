@@ -2,10 +2,19 @@ import React from 'react';
 import { ChevronLeft, ChevronRight, GraduationCap, Lightbulb, Users } from 'lucide-react';
 import Features from "./featurespage";
 import  { useRef } from "react";
-
+import OpportunitiesPage from './opportunitiespage';
+import Stats from './stats';
+import FAQ from './FAQSection';
+import Contact from './contactus';
+import Footer from './Footer';
 
 const SkillSphereLanding = () => {
     const featuresRef = useRef(null);
+    const opportunitiesRef = useRef(null);
+    const Statsref = useRef(null);
+    const FAQref = useRef(null);
+    const Contactref = useRef(null);
+    const FooterRef = useRef(null);
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-100 to-purple-100">
       {/* Navbar */}
@@ -234,7 +243,23 @@ const SkillSphereLanding = () => {
       <div ref={featuresRef}>
             <Features/>
           </div>
-    </div>
+       
+      <div ref={opportunitiesRef}>
+            <OpportunitiesPage/>
+          </div>
+      <div ref={Statsref}>
+            <Stats/>
+          </div>
+      <div ref={FAQref}>
+            <FAQ/>
+        </div>
+      <div ref={Contactref}>
+           <Contact/>
+           </div>
+       <div ref={FooterRef}>
+           <Footer/>
+           </div>
+      </div>
     
   );
 };
