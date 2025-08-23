@@ -5,6 +5,8 @@ import StudentDashboard from "./components/StudentDashboard";
 import StartLearning from "./components/StartLearning";
 import CoursePage from "./components/CoursePage";
 import Mainauth from "./components/Mainauth";
+import Studentlogin from "./components/studentlogin";
+import Mentorlogin from "./components/mentorlogin";
 
 
 const App = () => {
@@ -13,6 +15,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/mainauth" element={<Mainauth/>}/>
+        <Route path="/studentlogin" element={<Studentlogin/>}/>
+        <Route path="/mentorlogin" element={<Mentorlogin/>}/>
         <Route path="/StudentDashboard" element={<StudentDashboard/>}/>
         <Route path="/start-learning" element={<StartLearning/>}/>
         <Route path="/course/:coursename" element={<CoursePage/>}/>
@@ -20,5 +24,6 @@ const App = () => {
     </Router>
   );
 };
+
 
 export default App;

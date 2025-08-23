@@ -1,5 +1,7 @@
 import React from 'react';
 import { User, BookOpen, Award, Bell, Play, Plus, BarChart3, Star, Clock, Users } from 'lucide-react';
+import { Link } from "react-router-dom";
+
 
 const StudentDashboard = () => {
   // Dummy data
@@ -131,10 +133,12 @@ const StudentDashboard = () => {
                   <BarChart3 className="w-8 h-8 mb-2 group-hover:scale-110 transition-transform" />
                   <span className="text-sm font-medium text-center">Get AI-Generated Roadmap</span>
                 </button>
-                <button className="flex flex-col items-center justify-center p-6 bg-gradient-to-br from-green-500 to-green-600 text-white rounded-xl hover:from-green-600 hover:to-green-700 transition-all duration-200 group">
-                  <Plus className="w-8 h-8 mb-2 group-hover:scale-110 transition-transform" />
-                  <span className="text-sm font-medium text-center">Start Learning New Concept</span>
-                </button>
+                <Link to="/start-learning">
+                  <button className="flex flex-col items-center justify-center p-6 bg-gradient-to-br from-green-500 to-green-600 text-white rounded-xl hover:from-green-600 hover:to-green-700 transition-all duration-200 group">
+                    <Plus className="w-8 h-8 mb-2 group-hover:scale-110 transition-transform" />
+                    <span className="text-sm font-medium text-center">Start Learning New Concept</span>
+                  </button>
+                </Link>
                 <button className="flex flex-col items-center justify-center p-6 bg-gradient-to-br from-purple-500 to-purple-600 text-white rounded-xl hover:from-purple-600 hover:to-purple-700 transition-all duration-200 group">
                   <Play className="w-8 h-8 mb-2 group-hover:scale-110 transition-transform" />
                   <span className="text-sm font-medium text-center">Continue Learning</span>

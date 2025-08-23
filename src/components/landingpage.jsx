@@ -8,7 +8,6 @@ import FAQ from './FAQSection';
 import Contact from './contactus';
 import Footer from './Footer';
 import { Link } from 'react-router-dom';
-
 const SkillSphereLanding = () => {
     const featuresRef = useRef(null);
     const opportunitiesRef = useRef(null);
@@ -99,12 +98,15 @@ const SkillSphereLanding = () => {
               
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
+                 <Link to="/studentlogin">
                 <button 
                   className="px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-white"
                   style={{backgroundColor: '#2947A9'}}
                 >
                   Start Learning
                 </button>
+                </Link>
+                <Link to="/mentorlogin">
                 <button 
                   className="px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 border-2 hover:text-white"
                   style={{borderColor: '#2947A9', color: '#2947A9'}}
@@ -113,6 +115,7 @@ const SkillSphereLanding = () => {
                 >
                   Join as Mentor
                 </button>
+                </Link>
               </div>
             </div>
 
