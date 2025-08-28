@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0f1220;
+  --color-surface: #161a2b;
+  --color-primary: #6366F1;
+  --color-accent: #8B5CF6;
+}
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-background text-white antialiased;
+  }
+  ::selection {
+    @apply bg-primary/30 text-white;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .card-surface {
+    @apply bg-surface/80 backdrop-blur border border-white/10 rounded-xl shadow-glow;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 font-medium text-white shadow transition hover:shadow-lg hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:ring-offset-0 active:scale-[.98];
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-white/10 px-4 py-2 font-medium text-white/90 hover:bg-white/15 transition border border-white/10;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+}
