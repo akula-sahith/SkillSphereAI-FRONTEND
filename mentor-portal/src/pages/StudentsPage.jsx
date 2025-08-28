@@ -1,7 +1,9 @@
 import Card from '../components/Card'
 import { students } from '../data/dummy'
+import { useNavigate } from 'react-router-dom'
 
 export default function StudentsPage() {
+  const navigate = useNavigate()
   return (
     <section>
       <h2 className="text-2xl font-semibold mb-6">Students</h2>
@@ -13,8 +15,8 @@ export default function StudentsPage() {
             subtitle={s.branch}
             description={s.bio}
             avatarUrl={s.avatar}
-            onChat={() => (window.location.href = `/chat`)}
-            onCall={() => (window.location.href = `/call`)}
+            onChat={() => navigate('/chat')}
+            onCall={() => navigate('/call')}
             to={`/profile/${s.id}`}
           />
         ))}
